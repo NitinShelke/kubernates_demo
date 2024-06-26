@@ -49,7 +49,7 @@ jobs:
           aws eks --region ap-south-1 update-kubeconfig --name my-cluster
           
           # Apply Kubernetes manifests
-          kubectl apply -f k8s/deployment.yaml
+          kubectl apply -f deployment.yaml
           
           # Update the deployment image
           kubectl set image deployment/flask-app flask-app=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
